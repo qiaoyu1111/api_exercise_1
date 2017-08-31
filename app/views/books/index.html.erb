@@ -1,0 +1,18 @@
+<table class="table">
+<tr>
+  <th>Juhe ID</th>
+  <th>Province</th>
+  <th>city</th>
+  <th>District</th>
+  <th>Temp</th>
+</tr>
+<% @cities.each do |book| %>
+  <tr>
+    <td><%= book.juhe_id %></td>
+    <td><%= book.province %></td>
+    <td><%= book.city %></td>
+    <td><%= book.district %></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>

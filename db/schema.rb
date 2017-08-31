@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831023749) do
+ActiveRecord::Schema.define(version: 20170831061021) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "juhe_id"
+    t.string   "province"
+    t.string   "book"
+    t.string   "district"
+    t.string   "current_temp"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["juhe_id"], name: "index_books_on_juhe_id"
+  end
 
   create_table "cities", force: :cascade do |t|
     t.string   "juhe_id"
