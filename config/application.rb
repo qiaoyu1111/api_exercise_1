@@ -15,3 +15,4 @@ module ApiExercise
 end
 
 JUHE_CONFIG = Rails.application.config_for(:juhe)
+JUHE_CONFIG = Rails.application.config_for(:book)

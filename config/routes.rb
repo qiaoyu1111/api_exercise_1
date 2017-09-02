@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books
+  resources :books do
+    member do
+      post :update_temp
+    end
+  end
 
 end

@@ -6,13 +6,16 @@
   <th>District</th>
   <th>Temp</th>
 </tr>
-<% @cities.each do |book| %>
+<% @books.each do |book| %>
   <tr>
     <td><%= book.juhe_id %></td>
     <td><%= book.province %></td>
     <td><%= book.city %></td>
     <td><%= book.district %></td>
-    <td></td>
+    <td>
+      <%= book.current_temp %>
+      <%= link_to "更新空气质量", update_temp_book_path(book), :method => :post %>
+    </td>
   </tr>
 <% end %>
 </table>
