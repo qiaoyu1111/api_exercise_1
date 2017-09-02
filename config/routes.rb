@@ -13,7 +13,7 @@ Rails.application.routes.draw do
      post "/signup" => "auth#signup"
      post "/login" => "auth#login"
      post "/logout" => "auth#logout"
-     
+
      get "/reservations" => "reservations#index", :as => :reservations
      get "/trains"  => "trains#index", :as => :trains
      get "/trains/:train_number" => "trains#show", :as => :train
@@ -24,5 +24,8 @@ Rails.application.routes.draw do
      delete "/reservations/:booking_code" => "reservations#destroy", :as => :cancel_reservation
    end
   end
+
+  get "/me" => "users#show", :as => :user
+  patch "/me" => "users#update", :as => :update_user
 
 end
